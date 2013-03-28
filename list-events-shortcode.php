@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: list-events-shortcode
+ * Plugin Name: list_events_shortcode
  * Plugin URI: http://clftest.adm.arts.ubc.ca
  * Description: Assumes that you have "The Events Calendar" plugin installed and provides a shortcode to list the events on any page/post or widget are.
  * Author: Shaffiq Rahemtulla
  * Version: 0.5
  */
 
-function list-events-shortcode($atts) {
+function list_events_shortcode($atts) {
   //check if events plugin exists else return
   $plugin = 'the-events-calendar/the-events-calendar.php';
   include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -50,6 +50,6 @@ function list-events-shortcode($atts) {
   else return '<p>'.sprintf(__("%s: The Events Calendar plugin not found. Make sure this plugin is activated."),'<strong>'.$title.'</strong>').'</p>';
 
 }
-add_shortcode('list-events','list-events-shortcode'); 
+add_shortcode('list_events','list_events_shortcode'); 
 
 ?>
